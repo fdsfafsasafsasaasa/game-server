@@ -1,15 +1,14 @@
-import threading
-
 from client.net import send
 from client import player
 
-lock = threading.Lock()
+import pickle
 
+import time
 
-# client = ClientSocketThread(SERVER, lock)
+import pygame
 
-# client.start()
+pygame.init()
 
 while True:
-    input()
-    send(player.encode())
+    print(pickle.loads(send(player.encode())))
+    time.sleep(1)
