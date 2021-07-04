@@ -1,5 +1,7 @@
 from client.player import Player
 
-player = Player(1, 10, (52, 235, 67))
+import random
+
+player = Player(random.randint(0, 100), 30, tuple((random.randint(0, 255) for i in range(3))))
 
 SERVER = ("127.0.0.1", 12001)

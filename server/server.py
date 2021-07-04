@@ -31,6 +31,7 @@ class GameClientHandler(socketserver.StreamRequestHandler):
 
     def setup(self):
         super().setup()
+        print(f"Taking request from {self.client_address}")
         self.server.add_client(self)
 
     def handle(self):
